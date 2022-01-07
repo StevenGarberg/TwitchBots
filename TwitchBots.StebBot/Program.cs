@@ -1,3 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using TwitchBots.StebBot;
 
-Console.WriteLine("Hello, World!");
+var username = Environment.GetEnvironmentVariable("USERNAME");
+var password = Environment.GetEnvironmentVariable("PASSWORD");
+var channelName = Environment.GetEnvironmentVariable("CHANNEL_NAME");
+
+var bot = new TwitchBot(username, password, channelName);
+Console.ReadKey();
